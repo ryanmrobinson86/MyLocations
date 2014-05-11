@@ -23,6 +23,7 @@
 		68A5A45B1916F1F400E011B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68A5A4591916F1F400E011B4 /* InfoPlist.strings */; };
 		68A5A45D1916F1F400E011B4 /* MyLocationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A5A45C1916F1F400E011B4 /* MyLocationsTests.m */; };
 		68A5A4671916F93800E011B4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A5A4661916F93800E011B4 /* CoreLocation.framework */; };
+		68F2104A191E4C8E006CC1D1 /* LocationDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F21049191E4C8E006CC1D1 /* LocationDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		68A5A45A1916F1F400E011B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		68A5A45C1916F1F400E011B4 /* MyLocationsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLocationsTests.m; sourceTree = "<group>"; };
 		68A5A4661916F93800E011B4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		68F21048191E4C8E006CC1D1 /* LocationDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationDetailsViewController.h; path = ../LocationDetailsViewController.h; sourceTree = "<group>"; };
+		68F21049191E4C8E006CC1D1 /* LocationDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationDetailsViewController.m; path = ../LocationDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,11 +122,13 @@
 		68A5A4341916F1F400E011B4 /* MyLocations */ = {
 			isa = PBXGroup;
 			children = (
+				68A5A4401916F1F400E011B4 /* Main.storyboard */,
 				68A5A43D1916F1F400E011B4 /* AppDelegate.h */,
 				68A5A43E1916F1F400E011B4 /* AppDelegate.m */,
-				68A5A4401916F1F400E011B4 /* Main.storyboard */,
 				68A5A4431916F1F400E011B4 /* CurrentLocationViewController.h */,
 				68A5A4441916F1F400E011B4 /* CurrentLocationViewController.m */,
+				68F21048191E4C8E006CC1D1 /* LocationDetailsViewController.h */,
+				68F21049191E4C8E006CC1D1 /* LocationDetailsViewController.m */,
 				68A5A4461916F1F400E011B4 /* SecondViewController.h */,
 				68A5A4471916F1F400E011B4 /* SecondViewController.m */,
 				68A5A4491916F1F400E011B4 /* Images.xcassets */,
@@ -265,6 +270,7 @@
 				68A5A43F1916F1F400E011B4 /* AppDelegate.m in Sources */,
 				68A5A4451916F1F400E011B4 /* CurrentLocationViewController.m in Sources */,
 				68A5A43B1916F1F400E011B4 /* main.m in Sources */,
+				68F2104A191E4C8E006CC1D1 /* LocationDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
