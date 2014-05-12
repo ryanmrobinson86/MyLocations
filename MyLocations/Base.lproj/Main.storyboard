@@ -140,6 +140,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="FwP-P1-jXI" kind="push" identifier="PickCategory" id="Cqk-ab-Q5V"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -292,7 +295,49 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZx-Jj-1rV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1675" y="-138"/>
+            <point key="canvasLocation" x="1593" y="-138"/>
+        </scene>
+        <!--Category Picker View Controller-->
+        <scene sceneID="bWf-VI-dWG">
+            <objects>
+                <tableViewController id="FwP-P1-jXI" customClass="CategoryPickerViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="IlI-FU-YgC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="YEr-Qr-kAu" style="IBUITableViewCellStyleDefault" id="azY-Od-N2m">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="azY-Od-N2m" id="zWd-06-Zgv">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YEr-Qr-kAu">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="lUj-4M-ePr" kind="unwind" identifier="PickedCategory" unwindAction="categoryPickerDidPickCategory:" id="Kqi-2d-OFI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FwP-P1-jXI" id="bHT-mE-aYO"/>
+                            <outlet property="delegate" destination="FwP-P1-jXI" id="4ND-gm-J7L"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="zz6-h0-c1c"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OMH-v1-QZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="lUj-4M-ePr" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2015" y="-135"/>
         </scene>
         <!--Second View Controller - Second-->
         <scene sceneID="ot8-2e-RuS">
@@ -358,7 +403,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="poS-8n-CBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1149" y="-138"/>
+            <point key="canvasLocation" x="1119" y="-138"/>
         </scene>
     </scenes>
     <resources>
