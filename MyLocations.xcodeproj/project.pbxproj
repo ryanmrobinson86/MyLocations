@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68434242192ADEA500957046 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68434241192ADEA500957046 /* CoreData.framework */; };
+		68434248192AE2F900957046 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68434246192AE2F900957046 /* DataModel.xcdatamodeld */; };
+		6843424E192AE43600957046 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 6843424D192AE43600957046 /* Location.m */; };
 		686E70FE1928EACE00E163E0 /* HudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 686E70FD1928EACE00E163E0 /* HudView.m */; };
 		689EFFAC191FCD230039144C /* CategoryPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689EFFAB191FCD230039144C /* CategoryPickerViewController.m */; };
 		68A5A42F1916F1F400E011B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A5A42E1916F1F400E011B4 /* Foundation.framework */; };
@@ -39,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		68434241192ADEA500957046 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		68434247192AE2F900957046 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		6843424C192AE43600957046 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = ../Location.h; sourceTree = "<group>"; };
+		6843424D192AE43600957046 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = ../Location.m; sourceTree = "<group>"; };
 		686E70FC1928EACE00E163E0 /* HudView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HudView.h; sourceTree = "<group>"; };
 		686E70FD1928EACE00E163E0 /* HudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HudView.m; sourceTree = "<group>"; };
 		689EFFAA191FCD230039144C /* CategoryPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryPickerViewController.h; sourceTree = "<group>"; };
@@ -74,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68434242192ADEA500957046 /* CoreData.framework in Frameworks */,
 				68A5A4671916F93800E011B4 /* CoreLocation.framework in Frameworks */,
 				68A5A4311916F1F400E011B4 /* CoreGraphics.framework in Frameworks */,
 				68A5A4331916F1F400E011B4 /* UIKit.framework in Frameworks */,
@@ -116,6 +124,7 @@
 		68A5A42D1916F1F400E011B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68434241192ADEA500957046 /* CoreData.framework */,
 				68A5A4661916F93800E011B4 /* CoreLocation.framework */,
 				68A5A42E1916F1F400E011B4 /* Foundation.framework */,
 				68A5A4301916F1F400E011B4 /* CoreGraphics.framework */,
@@ -150,6 +159,9 @@
 		68A5A4351916F1F400E011B4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6843424C192AE43600957046 /* Location.h */,
+				6843424D192AE43600957046 /* Location.m */,
+				68434246192AE2F900957046 /* DataModel.xcdatamodeld */,
 				68A5A4361916F1F400E011B4 /* MyLocations-Info.plist */,
 				68A5A4371916F1F400E011B4 /* InfoPlist.strings */,
 				68A5A43A1916F1F400E011B4 /* main.m */,
@@ -279,6 +291,8 @@
 				68A5A4481916F1F400E011B4 /* SecondViewController.m in Sources */,
 				68A5A43F1916F1F400E011B4 /* AppDelegate.m in Sources */,
 				68A5A4451916F1F400E011B4 /* CurrentLocationViewController.m in Sources */,
+				68434248192AE2F900957046 /* DataModel.xcdatamodeld in Sources */,
+				6843424E192AE43600957046 /* Location.m in Sources */,
 				68A5A43B1916F1F400E011B4 /* main.m in Sources */,
 				686E70FE1928EACE00E163E0 /* HudView.m in Sources */,
 				689EFFAC191FCD230039144C /* CategoryPickerViewController.m in Sources */,
@@ -507,6 +521,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		68434246192AE2F900957046 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				68434247192AE2F900957046 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 68434247192AE2F900957046 /* DataModel.xcdatamodel */;
+			name = DataModel.xcdatamodeld;
+			path = ../DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 68A5A4231916F1F400E011B4 /* Project object */;
 }
