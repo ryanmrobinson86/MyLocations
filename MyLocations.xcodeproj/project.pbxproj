@@ -28,6 +28,8 @@
 		68A5A45B1916F1F400E011B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68A5A4591916F1F400E011B4 /* InfoPlist.strings */; };
 		68A5A45D1916F1F400E011B4 /* MyLocationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A5A45C1916F1F400E011B4 /* MyLocationsTests.m */; };
 		68A5A4671916F93800E011B4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A5A4661916F93800E011B4 /* CoreLocation.framework */; };
+		68B710B7193177150027C917 /* LocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B710B6193177150027C917 /* LocationsViewController.m */; };
+		68B710BA193186170027C917 /* LocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B710B9193186170027C917 /* LocationCell.m */; };
 		68F2104A191E4C8E006CC1D1 /* LocationDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F21049191E4C8E006CC1D1 /* LocationDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,10 @@
 		68A5A45A1916F1F400E011B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		68A5A45C1916F1F400E011B4 /* MyLocationsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLocationsTests.m; sourceTree = "<group>"; };
 		68A5A4661916F93800E011B4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		68B710B5193177150027C917 /* LocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsViewController.h; sourceTree = "<group>"; };
+		68B710B6193177150027C917 /* LocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsViewController.m; sourceTree = "<group>"; };
+		68B710B8193186170027C917 /* LocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationCell.h; sourceTree = "<group>"; };
+		68B710B9193186170027C917 /* LocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationCell.m; sourceTree = "<group>"; };
 		68F21048191E4C8E006CC1D1 /* LocationDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationDetailsViewController.h; path = ../LocationDetailsViewController.h; sourceTree = "<group>"; };
 		68F21049191E4C8E006CC1D1 /* LocationDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationDetailsViewController.m; path = ../LocationDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +144,10 @@
 			isa = PBXGroup;
 			children = (
 				68A5A4401916F1F400E011B4 /* Main.storyboard */,
+				68B710B5193177150027C917 /* LocationsViewController.h */,
+				68B710B6193177150027C917 /* LocationsViewController.m */,
+				68B710B8193186170027C917 /* LocationCell.h */,
+				68B710B9193186170027C917 /* LocationCell.m */,
 				68A5A43D1916F1F400E011B4 /* AppDelegate.h */,
 				68A5A43E1916F1F400E011B4 /* AppDelegate.m */,
 				68A5A4431916F1F400E011B4 /* CurrentLocationViewController.h */,
@@ -289,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68A5A4481916F1F400E011B4 /* SecondViewController.m in Sources */,
+				68B710B7193177150027C917 /* LocationsViewController.m in Sources */,
 				68A5A43F1916F1F400E011B4 /* AppDelegate.m in Sources */,
 				68A5A4451916F1F400E011B4 /* CurrentLocationViewController.m in Sources */,
 				68434248192AE2F900957046 /* DataModel.xcdatamodeld in Sources */,
@@ -296,6 +307,7 @@
 				68A5A43B1916F1F400E011B4 /* main.m in Sources */,
 				686E70FE1928EACE00E163E0 /* HudView.m in Sources */,
 				689EFFAC191FCD230039144C /* CategoryPickerViewController.m in Sources */,
+				68B710BA193186170027C917 /* LocationCell.m in Sources */,
 				68F2104A191E4C8E006CC1D1 /* LocationDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
