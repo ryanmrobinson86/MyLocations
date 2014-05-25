@@ -9,6 +9,7 @@
 #import "LocationDetailsViewController.h"
 #import "CategoryPickerViewController.h"
 #import "HudView.h"
+#import "Location.h"
 
 @interface LocationDetailsViewController () <UITextViewDelegate>
 
@@ -25,6 +26,7 @@
 {
     NSString *_descriptionText;
     NSString *_categoryName;
+    NSDate *_date;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -32,6 +34,7 @@
     if ((self = [super initWithCoder:aDecoder])) {
         _descriptionText = @"";
         _categoryName = @"No Category";
+        _date = [NSDate date];
     }
     return self;
 }
@@ -96,6 +99,21 @@
     HudView *hudView = [HudView hudInView:self.navigationController.view animated:YES];
     
     hudView.text = @"Tagged";
+    
+    Location *location = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
+    
+    location.locationDescription = _descriptionText;
+    location.category = _categoryName;
+    location.date = _date;
+    location.latitude = @(self.coordinate.latitude);
+    location.longitude = @(self.coordinate.longitude);
+    location.placemark = self.placemark;
+    
+    NSError *error;
+    if (![self.managedObjectContext save:&error]) {
+        FAIL_CORE_DATA_ERROR(error);
+        return;
+    }
     
     [self performSelector:@selector(closeScreen) withObject:nil afterDelay:0.6];
 }
