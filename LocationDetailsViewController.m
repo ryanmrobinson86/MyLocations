@@ -134,7 +134,7 @@
     
     NSError *error;
     if (![self.managedObjectContext save:&error]) {
-        FAIL_CORE_DATA_ERROR(error);
+        FATAL_CORE_DATA_ERROR(error);
         return;
     }
     

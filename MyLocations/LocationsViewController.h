@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 RRobinson. All rights reserved.
 //
 
-@interface LocationsViewController : UITableViewController
+@interface LocationsViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
