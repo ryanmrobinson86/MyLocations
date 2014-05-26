@@ -4,10 +4,7 @@
 //  The contents of this file are implicitly included at the beginning of every source file.
 //
 
-#import <UIKit/UIKit.h>
 #import <Availability.h>
-
-extern NSString * const ManagedObjectContextSaveDidFailNotification;
 
 #ifndef __IPHONE_5_0
 #warning "This project uses features only available in iOS SDK 5.0 and later."
@@ -18,10 +15,13 @@ extern NSString * const ManagedObjectContextSaveDidFailNotification;
     #import <Foundation/Foundation.h>
     #import <CoreLocation/CoreLocation.h>
     #import <CoreData/CoreData.h>
-#endif
+    #import <MapKit/MapKit.h>
 
-#define FATAL_CORE_DATA_ERROR(__error__)\
-    NSLog(@"*** Fatal Core Data Error in %s:%d\n%@\n%@",\
-        __FILE__, __LINE__, error, [error userInfo]);\
-    [[NSNotificationCenter defaultCenter] postNotificationName:\
-        ManagedObjectContextSaveDidFailNotification object:error];
+    extern NSString * const ManagedObjectContextSaveDidFailNotification;
+
+    #define FATAL_CORE_DATA_ERROR(__error__)\
+        NSLog(@"*** Fatal Core Data Error in %s:%d\n%@\n%@",\
+            __FILE__, __LINE__, error, [error userInfo]);\
+        [[NSNotificationCenter defaultCenter] postNotificationName:\
+            ManagedObjectContextSaveDidFailNotification object:error];
+#endif

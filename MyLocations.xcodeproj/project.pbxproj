@@ -20,7 +20,6 @@
 		68A5A43F1916F1F400E011B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A5A43E1916F1F400E011B4 /* AppDelegate.m */; };
 		68A5A4421916F1F400E011B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68A5A4401916F1F400E011B4 /* Main.storyboard */; };
 		68A5A4451916F1F400E011B4 /* CurrentLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A5A4441916F1F400E011B4 /* CurrentLocationViewController.m */; };
-		68A5A4481916F1F400E011B4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A5A4471916F1F400E011B4 /* SecondViewController.m */; };
 		68A5A44A1916F1F400E011B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68A5A4491916F1F400E011B4 /* Images.xcassets */; };
 		68A5A4511916F1F400E011B4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A5A4501916F1F400E011B4 /* XCTest.framework */; };
 		68A5A4521916F1F400E011B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A5A42E1916F1F400E011B4 /* Foundation.framework */; };
@@ -30,6 +29,8 @@
 		68A5A4671916F93800E011B4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A5A4661916F93800E011B4 /* CoreLocation.framework */; };
 		68B710B7193177150027C917 /* LocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B710B6193177150027C917 /* LocationsViewController.m */; };
 		68B710BA193186170027C917 /* LocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B710B9193186170027C917 /* LocationCell.m */; };
+		68B710BC19322D680027C917 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B710BB19322D680027C917 /* MapKit.framework */; };
+		68B710BF19322ED80027C917 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B710BE19322ED80027C917 /* MapViewController.m */; };
 		68F2104A191E4C8E006CC1D1 /* LocationDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F21049191E4C8E006CC1D1 /* LocationDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -65,8 +66,6 @@
 		68A5A4411916F1F400E011B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68A5A4431916F1F400E011B4 /* CurrentLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentLocationViewController.h; sourceTree = "<group>"; };
 		68A5A4441916F1F400E011B4 /* CurrentLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrentLocationViewController.m; sourceTree = "<group>"; };
-		68A5A4461916F1F400E011B4 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		68A5A4471916F1F400E011B4 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		68A5A4491916F1F400E011B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		68A5A44F1916F1F400E011B4 /* MyLocationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLocationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68A5A4501916F1F400E011B4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -78,6 +77,9 @@
 		68B710B6193177150027C917 /* LocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsViewController.m; sourceTree = "<group>"; };
 		68B710B8193186170027C917 /* LocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationCell.h; sourceTree = "<group>"; };
 		68B710B9193186170027C917 /* LocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationCell.m; sourceTree = "<group>"; };
+		68B710BB19322D680027C917 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		68B710BD19322ED80027C917 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		68B710BE19322ED80027C917 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		68F21048191E4C8E006CC1D1 /* LocationDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationDetailsViewController.h; path = ../LocationDetailsViewController.h; sourceTree = "<group>"; };
 		68F21049191E4C8E006CC1D1 /* LocationDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationDetailsViewController.m; path = ../LocationDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68B710BC19322D680027C917 /* MapKit.framework in Frameworks */,
 				68434242192ADEA500957046 /* CoreData.framework in Frameworks */,
 				68A5A4671916F93800E011B4 /* CoreLocation.framework in Frameworks */,
 				68A5A4311916F1F400E011B4 /* CoreGraphics.framework in Frameworks */,
@@ -130,6 +133,7 @@
 		68A5A42D1916F1F400E011B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68B710BB19322D680027C917 /* MapKit.framework */,
 				68434241192ADEA500957046 /* CoreData.framework */,
 				68A5A4661916F93800E011B4 /* CoreLocation.framework */,
 				68A5A42E1916F1F400E011B4 /* Foundation.framework */,
@@ -144,22 +148,24 @@
 			isa = PBXGroup;
 			children = (
 				68A5A4401916F1F400E011B4 /* Main.storyboard */,
-				68B710B5193177150027C917 /* LocationsViewController.h */,
-				68B710B6193177150027C917 /* LocationsViewController.m */,
-				68B710B8193186170027C917 /* LocationCell.h */,
-				68B710B9193186170027C917 /* LocationCell.m */,
 				68A5A43D1916F1F400E011B4 /* AppDelegate.h */,
 				68A5A43E1916F1F400E011B4 /* AppDelegate.m */,
-				68A5A4431916F1F400E011B4 /* CurrentLocationViewController.h */,
-				68A5A4441916F1F400E011B4 /* CurrentLocationViewController.m */,
-				68F21048191E4C8E006CC1D1 /* LocationDetailsViewController.h */,
-				68F21049191E4C8E006CC1D1 /* LocationDetailsViewController.m */,
-				686E70FC1928EACE00E163E0 /* HudView.h */,
-				686E70FD1928EACE00E163E0 /* HudView.m */,
 				689EFFAA191FCD230039144C /* CategoryPickerViewController.h */,
 				689EFFAB191FCD230039144C /* CategoryPickerViewController.m */,
-				68A5A4461916F1F400E011B4 /* SecondViewController.h */,
-				68A5A4471916F1F400E011B4 /* SecondViewController.m */,
+				68A5A4431916F1F400E011B4 /* CurrentLocationViewController.h */,
+				68A5A4441916F1F400E011B4 /* CurrentLocationViewController.m */,
+				686E70FC1928EACE00E163E0 /* HudView.h */,
+				686E70FD1928EACE00E163E0 /* HudView.m */,
+				6843424C192AE43600957046 /* Location.h */,
+				6843424D192AE43600957046 /* Location.m */,
+				68B710B8193186170027C917 /* LocationCell.h */,
+				68B710B9193186170027C917 /* LocationCell.m */,
+				68F21048191E4C8E006CC1D1 /* LocationDetailsViewController.h */,
+				68F21049191E4C8E006CC1D1 /* LocationDetailsViewController.m */,
+				68B710B5193177150027C917 /* LocationsViewController.h */,
+				68B710B6193177150027C917 /* LocationsViewController.m */,
+				68B710BD19322ED80027C917 /* MapViewController.h */,
+				68B710BE19322ED80027C917 /* MapViewController.m */,
 				68A5A4491916F1F400E011B4 /* Images.xcassets */,
 				68A5A4351916F1F400E011B4 /* Supporting Files */,
 			);
@@ -169,8 +175,6 @@
 		68A5A4351916F1F400E011B4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6843424C192AE43600957046 /* Location.h */,
-				6843424D192AE43600957046 /* Location.m */,
 				68434246192AE2F900957046 /* DataModel.xcdatamodeld */,
 				68A5A4361916F1F400E011B4 /* MyLocations-Info.plist */,
 				68A5A4371916F1F400E011B4 /* InfoPlist.strings */,
@@ -298,7 +302,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68A5A4481916F1F400E011B4 /* SecondViewController.m in Sources */,
 				68B710B7193177150027C917 /* LocationsViewController.m in Sources */,
 				68A5A43F1916F1F400E011B4 /* AppDelegate.m in Sources */,
 				68A5A4451916F1F400E011B4 /* CurrentLocationViewController.m in Sources */,
@@ -309,6 +312,7 @@
 				689EFFAC191FCD230039144C /* CategoryPickerViewController.m in Sources */,
 				68B710BA193186170027C917 /* LocationCell.m in Sources */,
 				68F2104A191E4C8E006CC1D1 /* LocationDetailsViewController.m in Sources */,
+				68B710BF19322ED80027C917 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
