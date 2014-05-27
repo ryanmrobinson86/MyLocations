@@ -118,7 +118,6 @@
 {
     [super viewDidLoad];
     [self updateLocations];
-    NSLog(@"Map");
     
     if ([_locations count] > 0) {
         [self showLocations];

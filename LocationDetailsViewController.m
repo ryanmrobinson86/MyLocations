@@ -11,7 +11,7 @@
 #import "HudView.h"
 #import "Location.h"
 
-@interface LocationDetailsViewController () <UITextViewDelegate>
+@interface LocationDetailsViewController () <UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIActionSheetDelegate>
 
 @property (nonatomic, weak) IBOutlet UITextView *descriptionTextView;
 @property (nonatomic, weak) IBOutlet UILabel *categoryLabel;
@@ -19,6 +19,8 @@
 @property (nonatomic, weak) IBOutlet UILabel *longitudeLabel;
 @property (nonatomic, weak) IBOutlet UILabel *addressLabel;
 @property (nonatomic, weak) IBOutlet UILabel *dateLabel;
+@property (nonatomic, weak) IBOutlet UIImageView *imageView;
+@property (nonatomic, weak) IBOutlet UILabel *photoLabel;
 
 @end
 
@@ -27,6 +29,10 @@
     NSString *_descriptionText;
     NSString *_categoryName;
     NSDate *_date;
+    UIImage *_image;
+    CGFloat _imageHeight;
+    UIImagePickerController *_imagePicker;
+    UIActionSheet *_actionSheet;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -35,8 +41,15 @@
         _descriptionText = @"";
         _categoryName = @"No Category";
         _date = [NSDate date];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidEnterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
     }
     return self;
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)viewDidLoad
@@ -63,6 +76,24 @@
     
     gestureRecognizer.cancelsTouchesInView = NO;
     [self.tableView addGestureRecognizer:gestureRecognizer];
+}
+
+- (void)applicationDidEnterBackground
+{
+    if (_imagePicker != nil) {
+        [self dismissViewControllerAnimated:NO completion:nil];
+        _imagePicker = nil;
+    }
+}
+
+- (void)showImage:(UIImage *)image
+{
+    _imageHeight = (260.0 / _image.size.width) * _image.size.height;
+    
+    self.imageView.image = image;
+    self.imageView.hidden = NO;
+    self.imageView.frame = CGRectMake(10,10,260,_imageHeight);
+    self.photoLabel.hidden = YES;
 }
 
 - (void)setLocationToEdit:(Location *)newLocationToEdit
@@ -168,12 +199,49 @@
     self.categoryLabel.text = _categoryName;
 }
 
+- (void)showPhotoMenu
+{
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        _actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Take Photo", @"Choose From Library", nil];
+        
+        [_actionSheet showInView:self.view];
+    } else {
+        [self choosePhotoFromLibrary];
+    }
+}
+
+- (void)takePhoto
+{
+    _imagePicker = [[UIImagePickerController alloc] init];
+    
+    _imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    _imagePicker.delegate = self;
+    _imagePicker.allowsEditing = YES;
+    [self presentViewController:_imagePicker animated:YES completion:nil];
+}
+
+- (void)choosePhotoFromLibrary
+{
+    _imagePicker = [[UIImagePickerController alloc] init];
+    
+    _imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    _imagePicker.delegate = self;
+    _imagePicker.allowsEditing = YES;
+    [self presentViewController:_imagePicker animated:YES completion:nil];
+}
+
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0 && indexPath.row == 0) {
         return 88;
+    } else if (indexPath.section == 1) {
+        if (self.imageView.hidden) {
+            return 44;
+        } else {
+            return _imageHeight + 20;
+        }
     } else if (indexPath.section == 2 && indexPath.row == 2) {
         CGRect rect = CGRectMake(100, 10, 205, 10000);
         
@@ -202,6 +270,9 @@
 {
     if (indexPath.section == 0 && indexPath.row == 0) {
         [self.descriptionTextView becomeFirstResponder];
+    } else if (indexPath.section == 1 && indexPath.row == 0) {
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+        [self showPhotoMenu];
     }
 }
 
@@ -217,6 +288,37 @@
 - (void)textViewDidEndEditing:(UITextView *)textView
 {
     _descriptionText = textView.text;
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    _image = info[UIImagePickerControllerEditedImage];
+    
+    [self showImage:_image];
+    [self.tableView reloadData];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    _imagePicker = nil;
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    _imagePicker = nil;
+}
+
+#pragma mark - UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        [self takePhoto];
+    } else {
+        [self choosePhotoFromLibrary];
+    }
+    _actionSheet = nil;
 }
 
 @end
