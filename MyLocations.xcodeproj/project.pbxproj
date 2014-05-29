@@ -31,6 +31,7 @@
 		68B710BA193186170027C917 /* LocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B710B9193186170027C917 /* LocationCell.m */; };
 		68B710BC19322D680027C917 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B710BB19322D680027C917 /* MapKit.framework */; };
 		68B710BF19322ED80027C917 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B710BE19322ED80027C917 /* MapViewController.m */; };
+		68B710C21936D7F10027C917 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B710C11936D7F10027C917 /* UIImage+Resize.m */; };
 		68F2104A191E4C8E006CC1D1 /* LocationDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F21049191E4C8E006CC1D1 /* LocationDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,8 @@
 		68B710BB19322D680027C917 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		68B710BD19322ED80027C917 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		68B710BE19322ED80027C917 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		68B710C01936D7F10027C917 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		68B710C11936D7F10027C917 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		68F21048191E4C8E006CC1D1 /* LocationDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationDetailsViewController.h; path = ../LocationDetailsViewController.h; sourceTree = "<group>"; };
 		68F21049191E4C8E006CC1D1 /* LocationDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationDetailsViewController.m; path = ../LocationDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +169,8 @@
 				68B710B6193177150027C917 /* LocationsViewController.m */,
 				68B710BD19322ED80027C917 /* MapViewController.h */,
 				68B710BE19322ED80027C917 /* MapViewController.m */,
+				68B710C01936D7F10027C917 /* UIImage+Resize.h */,
+				68B710C11936D7F10027C917 /* UIImage+Resize.m */,
 				68A5A4491916F1F400E011B4 /* Images.xcassets */,
 				68A5A4351916F1F400E011B4 /* Supporting Files */,
 			);
@@ -307,6 +312,7 @@
 				68A5A4451916F1F400E011B4 /* CurrentLocationViewController.m in Sources */,
 				68434248192AE2F900957046 /* DataModel.xcdatamodeld in Sources */,
 				6843424E192AE43600957046 /* Location.m in Sources */,
+				68B710C21936D7F10027C917 /* UIImage+Resize.m in Sources */,
 				68A5A43B1916F1F400E011B4 /* main.m in Sources */,
 				686E70FE1928EACE00E163E0 /* HudView.m in Sources */,
 				689EFFAC191FCD230039144C /* CategoryPickerViewController.m in Sources */,

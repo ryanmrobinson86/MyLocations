@@ -400,23 +400,28 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v7y-44-ojw">
-                                            <rect key="frame" x="20" y="7" width="280" height="21"/>
+                                            <rect key="frame" x="82" y="7" width="238" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.49999999999999961" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Z2v-5n-URS">
-                                            <rect key="frame" x="20" y="29" width="280" height="21"/>
+                                            <rect key="frame" x="82" y="29" width="238" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="IN1-Mh-Puw">
+                                            <rect key="frame" x="15" y="2" width="52" height="52"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="addressLabel" destination="Z2v-5n-URS" id="tae-Lh-Wme"/>
                                     <outlet property="descriptionLabel" destination="v7y-44-ojw" id="dLM-rp-VYc"/>
+                                    <outlet property="photoImageView" destination="IN1-Mh-Puw" id="XMH-7a-JHI"/>
                                     <segue destination="ex2-uL-QsD" kind="modal" identifier="EditLocation" id="SJc-UN-lCs"/>
                                 </connections>
                             </tableViewCell>
@@ -507,6 +512,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="5Ui-OS-eh0"/>
+        <segue reference="SJc-UN-lCs"/>
     </inferredMetricsTieBreakers>
 </document>
