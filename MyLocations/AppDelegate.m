@@ -24,19 +24,21 @@ NSString * const ManagedObjectContextSaveDidFailNotification = @"ManagedObjectCo
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+  UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     
-    CurrentLocationViewController *currentLocationViewController = (CurrentLocationViewController *)tabBarController.viewControllers[0];
-    UINavigationController *navigaionController = (UINavigationController *)tabBarController.viewControllers[1];
-    LocationsViewController *locationsViewController = (LocationsViewController *)navigaionController.viewControllers[0];
-    MapViewController *mapViewController = (MapViewController *)tabBarController.viewControllers[2];
+  CurrentLocationViewController *currentLocationViewController = (CurrentLocationViewController *)tabBarController.viewControllers[0];
+  UINavigationController *navigaionController = (UINavigationController *)tabBarController.viewControllers[1];
+  LocationsViewController *locationsViewController = (LocationsViewController *)navigaionController.viewControllers[0];
+  MapViewController *mapViewController = (MapViewController *)tabBarController.viewControllers[2];
     
-    currentLocationViewController.managedObjectContext = self.managedObjectContext;
-    locationsViewController.managedObjectContext = self.managedObjectContext;
-    mapViewController.managedObjectContext = self.managedObjectContext;
+  currentLocationViewController.managedObjectContext = self.managedObjectContext;
+  locationsViewController.managedObjectContext = self.managedObjectContext;
+  mapViewController.managedObjectContext = self.managedObjectContext;
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fatalCoreDataError:) name:ManagedObjectContextSaveDidFailNotification object:nil];
-    return YES;
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fatalCoreDataError:) name:ManagedObjectContextSaveDidFailNotification object:nil];
+  
+  [self customizeAppearance];
+  return YES;
 }
 
 - (void)fatalCoreDataError:(NSNotification *)notification
@@ -44,6 +46,14 @@ NSString * const ManagedObjectContextSaveDidFailNotification = @"ManagedObjectCo
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"InternalError", nil) message:NSLocalizedString(@"There was a Fatal Error in the App and it cannot continue.\n\nPress OK to terminate the app. Sorry for the inconvenience.", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
     
     [alertView show];
+}
+
+- (void)customizeAppearance
+{
+  [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
+  
+  [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],}];
+  [[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
 }
 
 #pragma mark - CoreData

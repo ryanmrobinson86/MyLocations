@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6810F1C81943571C0060D3A9 /* NSMutableArray+AddText.m in Sources */ = {isa = PBXBuildFile; fileRef = 6810F1C71943571C0060D3A9 /* NSMutableArray+AddText.m */; };
+		6810F1CB194366F10060D3A9 /* MyTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6810F1CA194366F10060D3A9 /* MyTabBarController.m */; };
+		6810F1CE194367F50060D3A9 /* MyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6810F1CD194367F50060D3A9 /* MyNavigationController.m */; };
 		68434242192ADEA500957046 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68434241192ADEA500957046 /* CoreData.framework */; };
 		68434248192AE2F900957046 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68434246192AE2F900957046 /* DataModel.xcdatamodeld */; };
 		6843424E192AE43600957046 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 6843424D192AE43600957046 /* Location.m */; };
@@ -46,6 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6810F1C61943571C0060D3A9 /* NSMutableArray+AddText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+AddText.h"; sourceTree = "<group>"; };
+		6810F1C71943571C0060D3A9 /* NSMutableArray+AddText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+AddText.m"; sourceTree = "<group>"; };
+		6810F1C9194366F10060D3A9 /* MyTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabBarController.h; sourceTree = "<group>"; };
+		6810F1CA194366F10060D3A9 /* MyTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabBarController.m; sourceTree = "<group>"; };
+		6810F1CC194367F50060D3A9 /* MyNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationController.h; sourceTree = "<group>"; };
+		6810F1CD194367F50060D3A9 /* MyNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationController.m; sourceTree = "<group>"; };
 		68434241192ADEA500957046 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		68434247192AE2F900957046 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		6843424C192AE43600957046 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = ../Location.h; sourceTree = "<group>"; };
@@ -169,6 +178,12 @@
 				68B710B6193177150027C917 /* LocationsViewController.m */,
 				68B710BD19322ED80027C917 /* MapViewController.h */,
 				68B710BE19322ED80027C917 /* MapViewController.m */,
+				6810F1CC194367F50060D3A9 /* MyNavigationController.h */,
+				6810F1CD194367F50060D3A9 /* MyNavigationController.m */,
+				6810F1C9194366F10060D3A9 /* MyTabBarController.h */,
+				6810F1CA194366F10060D3A9 /* MyTabBarController.m */,
+				6810F1C61943571C0060D3A9 /* NSMutableArray+AddText.h */,
+				6810F1C71943571C0060D3A9 /* NSMutableArray+AddText.m */,
 				68B710C01936D7F10027C917 /* UIImage+Resize.h */,
 				68B710C11936D7F10027C917 /* UIImage+Resize.m */,
 				68A5A4491916F1F400E011B4 /* Images.xcassets */,
@@ -307,13 +322,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6810F1C81943571C0060D3A9 /* NSMutableArray+AddText.m in Sources */,
 				68B710B7193177150027C917 /* LocationsViewController.m in Sources */,
 				68A5A43F1916F1F400E011B4 /* AppDelegate.m in Sources */,
 				68A5A4451916F1F400E011B4 /* CurrentLocationViewController.m in Sources */,
 				68434248192AE2F900957046 /* DataModel.xcdatamodeld in Sources */,
+				6810F1CB194366F10060D3A9 /* MyTabBarController.m in Sources */,
 				6843424E192AE43600957046 /* Location.m in Sources */,
 				68B710C21936D7F10027C917 /* UIImage+Resize.m in Sources */,
 				68A5A43B1916F1F400E011B4 /* main.m in Sources */,
+				6810F1CE194367F50060D3A9 /* MyNavigationController.m in Sources */,
 				686E70FE1928EACE00E163E0 /* HudView.m in Sources */,
 				689EFFAC191FCD230039144C /* CategoryPickerViewController.m in Sources */,
 				68B710BA193186170027C917 /* LocationCell.m in Sources */,
