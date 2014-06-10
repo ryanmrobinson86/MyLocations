@@ -10,6 +10,8 @@
 		6810F1C81943571C0060D3A9 /* NSMutableArray+AddText.m in Sources */ = {isa = PBXBuildFile; fileRef = 6810F1C71943571C0060D3A9 /* NSMutableArray+AddText.m */; };
 		6810F1CB194366F10060D3A9 /* MyTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6810F1CA194366F10060D3A9 /* MyTabBarController.m */; };
 		6810F1CE194367F50060D3A9 /* MyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6810F1CD194367F50060D3A9 /* MyNavigationController.m */; };
+		6810F1D0194792740060D3A9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6810F1CF194792740060D3A9 /* AudioToolbox.framework */; };
+		6810F1D3194792BF0060D3A9 /* Sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6810F1D2194792BF0060D3A9 /* Sound.caf */; };
 		68434242192ADEA500957046 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68434241192ADEA500957046 /* CoreData.framework */; };
 		68434248192AE2F900957046 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68434246192AE2F900957046 /* DataModel.xcdatamodeld */; };
 		6843424E192AE43600957046 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 6843424D192AE43600957046 /* Location.m */; };
@@ -55,6 +57,8 @@
 		6810F1CA194366F10060D3A9 /* MyTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabBarController.m; sourceTree = "<group>"; };
 		6810F1CC194367F50060D3A9 /* MyNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationController.h; sourceTree = "<group>"; };
 		6810F1CD194367F50060D3A9 /* MyNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationController.m; sourceTree = "<group>"; };
+		6810F1CF194792740060D3A9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6810F1D2194792BF0060D3A9 /* Sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sound.caf; sourceTree = "<group>"; };
 		68434241192ADEA500957046 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		68434247192AE2F900957046 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		6843424C192AE43600957046 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = ../Location.h; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6810F1D0194792740060D3A9 /* AudioToolbox.framework in Frameworks */,
 				68B710BC19322D680027C917 /* MapKit.framework in Frameworks */,
 				68434242192ADEA500957046 /* CoreData.framework in Frameworks */,
 				68A5A4671916F93800E011B4 /* CoreLocation.framework in Frameworks */,
@@ -123,6 +128,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6810F1D1194792BF0060D3A9 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				6810F1D2194792BF0060D3A9 /* Sound.caf */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		68A5A4221916F1F400E011B4 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +158,7 @@
 		68A5A42D1916F1F400E011B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6810F1CF194792740060D3A9 /* AudioToolbox.framework */,
 				68B710BB19322D680027C917 /* MapKit.framework */,
 				68434241192ADEA500957046 /* CoreData.framework */,
 				68A5A4661916F93800E011B4 /* CoreLocation.framework */,
@@ -195,6 +209,7 @@
 		68A5A4351916F1F400E011B4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6810F1D1194792BF0060D3A9 /* Sound */,
 				68434246192AE2F900957046 /* DataModel.xcdatamodeld */,
 				68A5A4361916F1F400E011B4 /* MyLocations-Info.plist */,
 				68A5A4371916F1F400E011B4 /* InfoPlist.strings */,
@@ -303,6 +318,7 @@
 			files = (
 				68A5A44A1916F1F400E011B4 /* Images.xcassets in Resources */,
 				68A5A4391916F1F400E011B4 /* InfoPlist.strings in Resources */,
+				6810F1D3194792BF0060D3A9 /* Sound.caf in Resources */,
 				68A5A4421916F1F400E011B4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
